@@ -1,0 +1,163 @@
+<ion-view view-title="Account">
+	<!--ion-content style="padding:5px"-->
+  	<ion-content>
+
+<!-- cbWarn -->
+  		<li class="item item-checkbox">
+			<label class="checkbox">
+				
+				<input 	type="checkbox" 
+						ng-model="cbWarn.status" 
+						ng-change="cbWarn.doChanged()"
+				></label>
+
+				<div 	class="wordwrap" 
+						style="color:{{cbWarn.color}}"
+				>{{cbWarn.text}}</div>
+				<!--"I agree to consult with my physician before starting"-->
+		</li>
+
+<!-- ddGender -->
+  		<label class="item item-input item-select">
+    		<div 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+    		>{{ddGender.label}}</div>
+    		<select ng-model="ddGender.value"
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+					ng-options="item for item in ddGender.list" 
+					ng-change="ddGender.doChanged()"
+    		></select>
+  		</label>
+
+<!-- tbAge -->
+  		<label class="item item-input">
+  			<span 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{tbAge.label}}</span>
+  			<input 	type="text" 
+  					ng-model="tbAge.value" 
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+  					onkeypress='return ui.allow_only_number(event)'
+					ng-change="tbAge.doChanged()"
+  			>
+  		</label>
+  
+<!-- tbWeight -->
+  		<label class="item item-input">
+  			<span 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{tbWeight.label}}</span>
+  			<input 	type="text" 
+  					ng-model="tbWeight.value" 
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+  					onkeypress='return ui.allow_only_number(event)'
+					ng-change="tbWeight.doChanged()"
+  			>
+  		</label>
+
+<!-- tbHeight -->
+  		<label class="item item-input">
+  			<span 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{tbHeight.label}}</span>
+  			<input 	type="text" 
+  					ng-model="tbHeight.value" 
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+  					onkeypress='return ui.allow_only_number(event)'
+					ng-change="tbHeight.doChanged()"
+  			>
+  		</label>
+
+<!-- tbFat -->
+  		<label  class="item item-input">
+  			<a class="button little-button-kd button-icon ion-ios-information" 
+	   			 ng-click="tbFat.showInfo()"></a>
+  			<span 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{tbFat.label}}</span>
+  			<input 	type="text" 
+  					ng-model="tbFat.value" 
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+  					onkeypress='return ui.allow_only_number(event)'
+					ng-change="tbFat.doChanged()"
+  			>
+  		</label>
+<!-- tbCalibration -->
+  	<label class="item item-input">
+			<button class="button little-button-kd button-icon ion-ios-information" 
+					ng-click="tbFat.showInfo()"></button>
+ 			<span 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{tbCalibration.label}}</span>
+  			<input 	type="text" 
+  					ng-model="tbCalibration.value" 
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+  					onkeypress='return ui.allow_only_number(event)'
+					ng-change="tbCalibration.doChanged()"
+  			>
+  	</label>
+
+<!-- ddResearch -->
+ 		<label class="item item-input item-select">
+			<!--button class="button little-button-kd button-icon ion-ios-information" 
+					ng-click="tbFat.showInfo()"></button-->
+  			<div 	class="input-label"  
+  					style="color:{{ui.lblColor}}"
+  			>{{ddResearch.label}}</div>
+   			<select ng-model="ddResearch.status"
+  					class="aval"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+					ng-options="item.lbl for item in ddResearch.list" 
+					ng-change="ddResearch.doChanged()"
+			></select>
+		</label>
+
+<!-- ddActivity -->
+		<label class="item item-stacked-select-kd">
+  			<div 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{ddActivity.label}}</div>
+			<select ng-model="ddActivity.status"
+  					class="aval item-stacked-select-ngOption-kd"
+					style="color:{{ui.valColor}};"
+					ng-disabled="ui.disabled"
+					ng-options="item.lbl for item in ddActivity.list" 
+					ng-change="ddActivity.doChanged()"
+			></select>
+		</label>
+
+<!-- ddGoal -->
+		<label class="item item-stacked-select-kd">
+  			<div 	class="input-label"
+  					style="color:{{ui.lblColor}}"
+  			>{{ddGoal.label}}</div>
+   			<select ng-model="ddGoal.status"
+  					class="aval item-stacked-select-ngOption-kd"
+					style="color:{{ui.valColor}}" 
+					ng-disabled="ui.disabled"
+					ng-options="item.lbl for item in ddGoal.list" 
+					ng-change="ddGoal.doChanged()"
+			></select>
+		</label>
+
+	<div style="padding: 0px 10px 0px 10px">
+ 	  	<h4 style=" color:{{ui.valColor}}">BMR: {{BMR()}} | LBM: {{LBM()}} | FFMI: {{FFMI()}}</h4>
+ 	  	<h4 style=" color:{{ui.valColor}}">BMRC: {{BMRC()}} | TDEE: {{TDEE()}} | TDC: {{TDC()}}</h4>
+	</div>
+
+  </ion-content>
+
+</ion-view>

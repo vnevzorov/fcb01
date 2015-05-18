@@ -1,0 +1,185 @@
+.little-button-kd {
+/* my little roind icon-button */
+    padding:0 16px 0 0;
+    color: #387EF5;
+    min-height:0 !important;
+    border-width:0 !important;
+    transition: opacity 0.1s ease 0s;
+    min-width: initial;
+    border-color: transparent;
+    background: none repeat scroll 0% 0% transparent;
+    font-size: 25px !important; 
+
+/*    
+    top: 50%;
+
+    _border-color: #B2B2B2;
+    _background-color: #F8F8F8;
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px 12px;
+    min-width: 52px;
+    min-height: 47px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    line-height: 42px;
+    cursor: pointer;*/
+}
+.little-button-kd:after {
+  pointer-events: none;
+}
+.little-button-kd:hover {
+    color: #0C63EE;
+}
+
+/*	wrap long text and urls	*/
+.wordwrap
+{
+	white-space: pre; /* CSS 2.0 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3.0 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	word-wrap: break-word; /* IE 5+ */
+} 
+
+/*	"value" specific additional CSS	 properties	*/
+.aval
+{
+	font-style: italic; 
+  text-align:right;
+}
+.aval:disabled {
+	background-color:white!important;
+  color:white!important;;
+}
+
+/*  FIX: Fix of a case while input values stay visible on 
+  an android Samsung device.
+*/
+input:disabled {
+  color:white!important;
+}
+
+
+/*	Additional class to use with ".item-stacked-select-kd"
+	in "select" while ng-select is used instead "<select>" tag.
+
+	Usage:
+   		<label class="item item-stacked-select-kd">
+  			<div>Select</div>
+				<select class="item-stacked-select-ngOption-kd"
+						ng-options="item.lbl for item in list" 
+				></select>
+		</label>
+*/
+.item-stacked-select-ngOption-kd {
+	padding: 0 32px 0 16px !important;
+	max-width: 100%; 
+	width: 100%; 
+}
+
+/*	revrited item-select class
+	It allows to orginize "staked select" field:
+
+	Usage:
+		<label class="item item-stacked-select-kd">
+    		<div>Color</div>
+    		<select>
+      			<option>Blue</option>
+      			<option selected>Green (It's a very long option to see how it will be hendled)</option>
+      			<option>Red</option>
+    		</select>
+  		</label>
+*/
+.item-stacked-select-kd {
+  padding: 8px 16px 8px 16px !important;	/*	Main padding */
+  position: relative; }
+  .item-stacked-select-kd select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+/*  position: absolute;
+    top: 0;
+    padding: 14px 48px 16px 16px;			
+*/
+    padding: 0 32px 0 16px !important;	/*	Additional padding of the value */
+    /* top-right-bottom-left */
+    right: 0;
+    max-width: 100%;
+    border: none;
+    background: #fff;
+    color: #333;
+    text-indent: 0.01px;
+    text-overflow: '';
+    white-space: nowrap;
+    font-size: 14px;
+    cursor: pointer;
+    direction: rtl; }
+  .item-stacked-select-kd select::-ms-expand {
+    display: none; }
+  .item-stacked-select-kd option {
+    direction: ltr; }
+  .item-stacked-select-kd:after {
+  	/*	"select" triangle after value */
+    position: absolute;
+    top: 50%;				/*	Triangle vertical position (of whole field)	*/
+    right: 16px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    color: #999;
+    content: "";
+    pointer-events: none; }
+  .item-stacked-select-kd.item-light select {
+    background: #fff;
+    color: #444; }
+  .item-stacked-select-kd.item-stable select {
+    background: #f8f8f8;
+    color: #444; }
+  .item-stacked-select-kd.item-stable:after, .item-select.item-stable .input-label {
+    color: #656565; }
+  .item-stacked-select-kd.item-positive select {
+    background: #387ef5;
+    color: #fff; }
+  .item-stacked-select-kd.item-positive:after, .item-select.item-positive .input-label {
+    color: #fff; }
+  .item-stacked-select-kd.item-calm select {
+    background: #11c1f3;
+    color: #fff; }
+  .item-stacked-select-kd.item-calm:after, .item-select.item-calm .input-label {
+    color: #fff; }
+  .item-stacked-select-kd.item-assertive select {
+    background: #ef473a;
+    color: #fff; }
+  .item-stacked-select-kd.item-assertive:after, .item-select.item-assertive .input-label {
+    color: #fff; }
+  .item-stacked-select-kd.item-balanced select {
+    background: #33cd5f;
+    color: #fff; }
+  .item-stacked-select-kd.item-balanced:after, .item-select.item-balanced .input-label {
+    color: #fff; }
+  .item-stacked-select-kd.item-energized select {
+    background: #ffc900;
+    color: #fff; }
+  .item-stacked-select-kd.item-energized:after, .item-select.item-energized .input-label {
+    color: #fff; }
+  .item-stacked-select-kd.item-royal select {
+    background: #886aea;
+    color: #fff; }
+  .item-stacked-select-kd.item-royal:after, .item-select.item-royal .input-label {
+    color: #fff; }
+  .item-stacked-select-kd.item-dark select {
+    background: #444;
+    color: #fff; }
+  .item-stacked-select-kd.item-dark:after, .item-select.item-dark .input-label {
+    color: #fff; }
