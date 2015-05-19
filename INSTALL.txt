@@ -1,0 +1,15 @@
+1. To make locally installed karma working install globally karma-cli:
+
+    npm install karma-cli -g
+
+2. Run
+    npm install
+    bower install
+
+3. For automated GUI testin g run
+    npm run protractor
+
+4. For automated unit testing run
+    npm test
+
+    This will re-run the test each time JavScript files are saved.

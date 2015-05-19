@@ -1,0 +1,11 @@
+{
+  "name": "body-calc",
+  "description": "Body fat calculator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vnevzorov/dk1",
+  "license": "",
+  "private": true,
+  "dependencies": {
+
+  }
+}
