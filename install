@@ -1,0 +1,33 @@
+#!/bin/bash
+
+function purge(){
+	cd `dirname "$0"`
+	sudo rm -rf node_modules
+	sudo rm -rf platforms
+	sudo rm -rf plugins
+}
+
+function installProject(){
+# Generates Cordova test project into the direcrory where the script is launched from 
+	cd `dirname "$0"`
+	sudo npm install
+	bower install
+#	cordova platform add android
+#	cordova platform add ios
+#	cordova plugin add cordova-plugin-console
+#	cordova plugin add cordova-plugin-device
+
+	#
+	# http://jbavari.github.io/blog/2014/06/24/managing-cordova-plugins-with-package-dot-json-and-hooks/
+	#
+	node tasks/platforms.js
+	node tasks/plugins.js
+}
+
+# *************************************************************************************
+#
+#                                        Main
+#
+# *************************************************************************************
+#purge
+installProject

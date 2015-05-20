@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Body fat claculator",
   "main": "gulpfile.js",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "plugins": [
+    "org.apache.cordova.console",
+    "org.apache.cordova.device"
+  ],
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.4.1",
@@ -14,7 +22,7 @@
     "gulp-util": "^2.2.20",
     "http-server": "^0.8.0",
     "jasmine-core": "^2.3.4",
-    "karma": "^0.12.31",
+    "karma": "^0.12.32",
     "karma-chrome-launcher": "^0.1.12",
     "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "^0.3.5",
