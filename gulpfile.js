@@ -47,7 +47,7 @@ gulp.task('default', $.taskListing.withFilters(null, 'default'));
     Runs a live updating local server, opens it in Google Chrome  
 ******************************************************************/
 gulp.task('serve', function() {
-  bs_serve("./www/");
+  bs_serve("./");
   gulp.watch(watchList, function(evt) {  
     browserSync.reload();
     changeEvent(evt);

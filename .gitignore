@@ -1,4 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+### ************************* Netbeans project ****************************
+nbproject
+
 ### ************************* HTML5 Project *******************************
 # Bower dependencies should not be stored in Git
 www/lib/bc/
@@ -139,3 +142,4 @@ platforms
 plugins
 
 
+/nbproject/private/

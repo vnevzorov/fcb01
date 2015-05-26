@@ -1,11 +1,17 @@
-<ons-toolbar>
-    <div class="center">Page1</div>
-</ons-toolbar>
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Title</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-bars">
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
 
-<div style="text-align: center">
-    <br />
-    <ons-button 
-        ng-click="ons.navigator.pushPage('new_page.html')">
-        Push New Page
-    </ons-button>
-</div>
+    <p style="text-align: center">
+        <ons-button modifier="light" ng-click="app.navi.popPage('page.html');">Pop</ons-button>
+    </p>
+</ons-page>

@@ -1,7 +1,7 @@
 {
-  "name": "dk1",
-  "version": "1.0.0",
-  "description": "Body fat claculator",
+  "name": "flashcard",
+  "version": "0.0.0",
+  "description": "Flashcard application",
   "main": "gulpfile.js",
   "platforms": [
     "ios",
@@ -41,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vnevzorov/dk1.git"
+    "url": "git+https://github.com/vnevzorov/flashcard.git"
   },
-  "author": "D.Karmalita",
+  "author": "V.Nevzorov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vnevzorov/dk1/issues"
+    "url": "https://github.com/vnevzorov/flashcard/issues"
   },
-  "homepage": "https://github.com/vnevzorov/dk1#readme"
+  "homepage": "https://github.com/vnevzorov/flashcard#readme"
 }
