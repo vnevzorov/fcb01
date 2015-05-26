@@ -7,7 +7,7 @@
 
 var module = angular.module('flashcard.scroller', []);
 
-module.controller('ScrollerController', ['$scope', '$window', function($scope, $window){
+module.controller('ScrollerController', ['$scope', function($scope){
         console.log('------ We are in ScrollerController')
         $scope.doSwipeleft = function () {
             console.log('----- Swipe left');
