@@ -21,7 +21,7 @@ var app = ons.bootstrap('FlashcardApp', ['onsen',
  * @param {type} param2
  */
 app.controller("PageController", ['$scope', function ($scope) {
-        
+        $scope.myMar = 'hello';
         //This is the place to put initialization code
         ons.ready(function () {
             console.log('----- Initialization...');

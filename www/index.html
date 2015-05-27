@@ -11,23 +11,23 @@
         <script src="views/scroller/scroller.js"></script>
         <script src="app.js"></script>
 
-    </head>
+    </head> 
 
     <body>
         <div ng-controller="PageController">
-            <!-- ons-navigator animation="lift" var="app.navi" -->
+            <ons-navigator animation="lift" var="app.navi">
             <ons-page>
                 <ons-toolbar>
                     <div class="center">Title</div>
                 </ons-toolbar>
 
-                <!-- p style="text-align: center">
+                <p style="text-align: center">
                 <ons-button modifier="light" ng-click="app.navi.pushPage('page1.html');">Push</ons-button>
-                </p -->
+                </p>
                 <div ng-controller="ScrollerController">
                 <ons-gesture-detector ng-swipeleft="doSwipeleft()">
                     <div id="detect-area" style="width: 100px; height: 100px;">
-                        Swipe Here
+                        <div class="center">Swipe here</div>
                     </div>
                 </ons-gesture-detector>
                 </div>
@@ -38,7 +38,7 @@
                 </ons-tabbar>
                 -->
             </ons-page>
-            <!-- /ons-navigator -->
+            </ons-navigator>
         </div>
     </body>
 </html>

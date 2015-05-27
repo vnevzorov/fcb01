@@ -22,7 +22,6 @@ function bs_serve(www_path, deb){
 //  Launch browser-synk server
 
     deb = typeof deb !== 'undefined' ? deb : 400; // set default vakue
-
     browserSync.init({
     // options doc: http://www.browsersync.io/docs/options/
         server: www_path,         // Serve files from the app directory
@@ -47,9 +46,26 @@ gulp.task('default', $.taskListing.withFilters(null, 'default'));
     Runs a live updating local server, opens it in Google Chrome  
 ******************************************************************/
 gulp.task('serve', function() {
-  bs_serve("./");
+  bs_serve("./www");
   gulp.watch(watchList, function(evt) {  
     browserSync.reload();
     changeEvent(evt);
   });
+});
+
+/**
+* This is a different version of the same command which works on Linux.
+* Apparently Linux does not like browser: "google chrome" property.
+*/
+gulp.task('serve1', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./www"
+        },
+	injectChanges: true      // Inject CSS changes
+    });
+    gulp.watch(watchList, function(evt) {  
+    	browserSync.reload();
+    	changeEvent(evt);
+    });
 });
